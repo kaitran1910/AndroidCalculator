@@ -11,4 +11,4 @@ Main Focus when writing this app:
 
 You should be able to Build & Run this app directly
 
-![Screenshot_20220512_163820_com example androidcalculator](https://user-images.githubusercontent.com/61256810/168164911-2ff30a73-bbcb-4885-a0e5-1f397be4437c.jpg)
+![Screenshot_20220512_163820_com example androidcalculator | maxWidth=250](https://user-images.githubusercontent.com/61256810/168164911-2ff30a73-bbcb-4885-a0e5-1f397be4437c.jpg | maxWidth=250)
