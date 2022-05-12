@@ -11,4 +11,4 @@ Main Focus when writing this app:
 
 You should be able to Build & Run this app directly
 
-<img src="https://user-images.githubusercontent.com/61256810/168164911-2ff30a73-bbcb-4885-a0e5-1f397be4437c.jpg" maxWidth="100">
+<img src="https://user-images.githubusercontent.com/61256810/168164911-2ff30a73-bbcb-4885-a0e5-1f397be4437c.jpg" width="100%" max-width="250px">
