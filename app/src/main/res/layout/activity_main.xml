@@ -1,18 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="end|bottom"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_AC"
+            style="@style/FuncButton"
+            android:onClick="onClear"
+            android:text="AC"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Prefix"
+            style="@style/FuncButton"
+            android:onClick="onPrefixChange"
+            android:text="+/-"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Percent"
+            style="@style/FuncButton"
+            android:onClick="onPercent"
+            android:text="%"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Divide"
+            style="@style/OperatorButton"
+            android:onClick="onOperator"
+            android:text="/"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_7"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="7"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_8"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="8"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_9"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="9"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Multiply"
+            style="@style/OperatorButton"
+            android:onClick="onOperator"
+            android:text="*"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_4"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="4"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_5"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="5"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_6"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="6"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Minus"
+            style="@style/OperatorButton"
+            android:onClick="onOperator"
+            android:text="-"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_1"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="1"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_2"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="2"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_3"
+            style="@style/DigitButton"
+            android:onClick="onDigit"
+            android:text="3"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Plus"
+            style="@style/OperatorButton"
+            android:onClick="onOperator"
+            android:text="+"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_0"
+            style="@style/DigitButton"
+            android:layout_weight="2"
+            android:onClick="onDigit"
+            android:text="0"
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Dot"
+            style="@style/DigitButton"
+            android:onClick="onDecimalPoint"
+            android:text="."
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn_Equal"
+            style="@style/OperatorButton"
+            android:onClick="onEqual"
+            android:text="="
+            app:cornerRadius="40dp"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
